@@ -1,23 +1,20 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
+const BookFactory = (title, author, pages, read) => {
+  return { title, author, pages, read };
+};
 
 function addBookToLibrary(newBook) {
   myLibrary.push(newBook);
 }
 
-const TSAR = new Book('The Sun Also Rises', 'Ernest Hemingway', '500', 'Read');
+const TSAR = BookFactory('The Sun Also Rises', 'Ernest Hemingway', '500', 'Read');
 
-const Gatsby = new Book('The Great Gatsby', 'Fitzgerald', '300', 'Not Read');
+const Gatsby = BookFactory('The Great Gatsby', 'Fitzgerald', '300', 'Not Read');
 
-const Junot = new Book('The Brief Wondrous Life of Oscar Wao', 'Junot Díaz', '400', 'Read');
+const Junot = BookFactory('The Brief Wondrous Life of Oscar Wao', 'Junot Díaz', '400', 'Read');
 
-const Watchmen = new Book('Watchmen', 'Alan Moore', '540', 'Read');
+const Watchmen = BookFactory('Watchmen', 'Alan Moore', '540', 'Read');
 
 
 addBookToLibrary(TSAR);
